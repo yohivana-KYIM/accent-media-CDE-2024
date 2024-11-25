@@ -55,5 +55,5 @@ Prérequis :
 
     Clonez le projet :
 
-git clone https://github.com/votre-repo/accent-media-2024.git  
+git clone https://github.com/yohivana-KYIM/accent-media-CDE-2024
 cd accent-media-2024
