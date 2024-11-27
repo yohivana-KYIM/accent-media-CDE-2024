@@ -85,62 +85,74 @@
         <div class="owl-carousel owl-theme caroussel_actualite">
           <div class="item_actualite">
             <a href="actualites.html">
-              <img src="../../assets/actualite1.jpeg" />
+              <img src="../../../assets/actualite1.jpeg" />
             </a>
             <h4>Lancement des Activités à la CDEC</h4>
             <span> Lun. 06 Mai 2024 </span>
             <button>
-              <a href="actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
           <div class="item_actualite">
             <a href="actualites.html">
-              <img src="../../assets/actualite2.jpeg" />
+              <img src="../../../assets/actualite2.jpeg" />
             </a>
             <h4>Procédures de Consignations Administratives (Le Guide)</h4>
             <span> Mer. 24 Avril 2024 </span>
             <button>
-              <a href="actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
           <div class="item_actualite">
             <a href="actualites.html">
-              <img src="../../assets/actualite3.jpeg" />
+              <img src="../../../assets/actualite3.jpeg" />
             </a>
             <h4>Le voile levé sur les missions de la CDEC</h4>
             <span> Mer. 17 Avril 2024 </span>
             <button>
-              <a href="actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
           <div class="item_actualite">
-            <a href="#">
-              <img src="../../assets/actualite1.jpeg" />
+            <a href="actualites.html">
+              <img src="../../../assets/actualite1.jpeg" />
             </a>
             <h4>Lancement des Activités à la CDEC</h4>
             <span> Lun. 06 Mai 2024 </span>
             <button>
-              <a href="../actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
           <div class="item_actualite">
-            <a href="#">
-              <img src="../../assets/actualite2.jpeg" />
+            <a href="actualites.html">
+              <img src="../../../assets/actualite2.jpeg" />
             </a>
             <h4>Procédures de Consignations Administratives (Le Guide)</h4>
             <span> Mer. 24 Avril 2024 </span>
             <button>
-              <a href="actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
           <div class="item_actualite">
-            <a href="#">
-              <img src="../../assets/actualite3.jpeg" />
+            <a href="actualites.html">
+              <img src="../../../assets/actualite3.jpeg" />
             </a>
             <h4>Le voile levé sur les missions de la CDEC</h4>
             <span> Mer. 17 Avril 2024 </span>
             <button>
-              <a href="actualites.html" class="text"> Lire plus </a>
+              <router-link to="/actualites" class="text">
+                Lire plus
+              </router-link>
             </button>
           </div>
         </div>
@@ -149,7 +161,7 @@
   </section>
 </template>
 
-<script>
+<script setup>
 import { onMounted } from "vue";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel";
@@ -195,6 +207,8 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
-@import "../../../css/actualites.css";
+<style>
+@import "../../../css/presentation_actualite.css";
+/* @import "../../../css/actualites.css";
+@import "../../../css/presentation_actualite.css"; */
 </style>

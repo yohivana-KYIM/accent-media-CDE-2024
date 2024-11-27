@@ -1,66 +1,83 @@
 <template>
-  <section class="body_information">
-    <div class="group_information">
-      <div class="prc">
-        <img src="../../assets/img-prc.png" alt="" />
-        <h3>S.E. Paul BIYA</h3>
-        <hr />
-        <span>Président de la République du Cameroun</span>
-        <h4>Chef de l’Etat</h4>
-      </div>
-      <hr class="hr" />
-      <div class="prc info_decret">
-        <div class="prc_decret">
-          <h3>
-            DECRET N° 2011/105 DU 15 AVRIL 2011 PORTANT ORGANISATION ET
-            FONCTIONNEMENT DE LA CAISSE DES DEPOTS ET CONSIGNATIONS
-          </h3>
-          <button>Lire la suite</button>
-        </div>
-      </div>
+  <section class="body_actualites">
+    <div class="titre_actualite">
+      <h1>Présentation de la CDEC</h1>
     </div>
   </section>
-  <section class="organigramme">
-    <div class="divider">organigramme CDEC</div>
-    <img src="../../assets/organigramme_cdec.jpeg" alt="" />
-  </section>
-  <section class="section_decret">
-    <div class="decret_div">
-      <div class="decret_information">
-        <h1>les décrets</h1>
-      </div>
-      <div class="decret_list">
-        <hr class="hr" />
-        <div class="decret_list_group">
-          <div class="decret_list_item">
-            <img src="../../assets/hand.png" alt="" />
-            <a
-              href="../docs/decrets/Décret_N_2011_105_du_15_avril_2011_portant_Organisation_et_Fonctionneme.._.pdf"
-              download
-            >
-              DÉCRET N° 2023/08500/PM DU 01 DÉC 2023 Fixant les modalités de
-              transfert des fonds et valeurs dévolus à la Caisse des Dépôts et
-              Consignations
-            </a>
-          </div>
-          <div class="decret_list_item">
-            <img src="../../assets/hand.png" alt="" />
-            <a
-              href="../docs/decrets/FR - Decret sur le transfert des Fonds et Valeurs de la CDEC.pdf"
-              download
-            >
-              DECRET N° 2011/105 DU 15 AVRIL 2011 PORTANT ORGANISATION ET
-              FONCTIONNEMENT DE LA CAISSE DES DEPOTS ET CONSIGNATIONS
-            </a>
-          </div>
-        </div>
-      </div>
+
+  <section class="body_info">
+    <div class="mission_info">
+      <p>
+        La création de la Caisse des Dépôts et Consignations du Cameroun est
+        intervenue dans ce contexte où le Cameroun avait besoin d’un instrument
+        innovant et alternatif à l’endettement public et capable de mobiliser,
+        sécuriser et rentabiliser des ressources complémentaires, pour les
+        orienter vers le financement du développement socio-économique.
+      </p>
+      <p>
+        La Caisse des Dépôts et Consignations du Cameroun (CDEC), établissement
+        public à caractère spécial, a ainsi été créée en vertu de la loi n°
+        2008/003 du 14 avril 2008 régissant les dépôts et consignations. Son
+        organisation a été consacrée par le décret N°2011-105 du 15 avril 2011
+        portant organisation et fonctionnement de la CDEC. Suivant ces textes
+        organiques, la CDEC a pour mission de recevoir, de conserver et de gérer
+        les sommes et avoirs publics ou privés, conformément aux lois et
+        règlements en vigueur. Elle peut également gérer sous mandat les
+        services spécifiques qui lui sont confiés par l’État ou ses
+        démembrements. Aussi, la CDEC peut concourir au financement du
+        développement du pays, par l’intermédiaire des structures spécialisées,
+        selon les priorités définies par le gouvernement.
+      </p>
+      <p>
+        La CDEC est également un outil important de concrétisation de la vision
+        d’un Cameroun émergent à l’horizon 2035, impulsée par le Président de la
+        République, Son Excellence Paul BIYA, et dont la mise en œuvre est
+        lancée depuis 2010 à travers la réalisation des grands projets
+        structurants, dits de première génération, inscrits dans le Document de
+        Stratégie pour la Croissance et l’Emploi (DSCE). L’opérationnalisation
+        de la CDEC intervient à point dans le contexte actuel particulièrement
+        déterminant pour le Cameroun, marqué par :
+      </p>
+
+      <!-- List of Key Points -->
+      <ul class="pl-5 space-y-2 list-disc list-inside">
+        <li>
+          La nécessité de relancer l’économie impactée par diverses crises
+          sécuritaires, sanitaires et économiques.
+        </li>
+        <li>
+          L’accumulation de la dette publique engendrant un risque élevé de
+          surendettement.
+        </li>
+        <li>
+          Le Plan Stratégique Triennal de la CDEC 2023-2025 et le lancement de
+          la deuxième phase de la vision 2035 dans la Stratégie Nationale de
+          Développement 2020-2030 (SND30), pour la transformation structurelle
+          et le développement inclusif du Cameroun.
+        </li>
+      </ul>
+
+      <p>
+        L’entrée en scène de la CDEC vient ainsi compléter l’architecture
+        institutionnelle de financement du développement au Cameroun. Celle-ci
+        ambitionne de se positionner comme une institution stratégique, devenir
+        le premier soutien et catalyseur des politiques publiques à travers les
+        stratégies sectorielles et les grands programmes d’infrastructures, et
+        de jouer un rôle central dans la modernisation de l’économie
+        camerounaise. Elle aspire également à l’émergence de nouvelles filières
+        porteuses, avec des effets à l’échelle macroéconomique sur l’emploi, la
+        productivité et la croissance.
+      </p>
     </div>
   </section>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "PresentationCDEC",
+};
+</script>
 
 <style>
-@import "../../../css/lacdec.css";
+@import "../../../css/missions.css";
 </style>

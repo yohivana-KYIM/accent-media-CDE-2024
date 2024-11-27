@@ -1,9 +1,6 @@
 <template>
   <div class="containers">
     <div class="arrow l" @click="prev">
-      <!-- <img src="../assets/l.png" alt="l" /> -->
-      <!-- SVG pour la flèche gauche avec couleur #324C9C -->
-
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -13,6 +10,7 @@
         <path d="M15 18l-6-6 6-6v12z" fill="#324C9C" />
       </svg>
     </div>
+
     <div class="slide slide-1">
       <div class="caption">
         <h3 data-text="Bienvenue à la Caisse des Dépôts et Consignations"></h3>
@@ -21,12 +19,14 @@
         ></p>
       </div>
     </div>
+
     <div class="slide slide-2">
       <div class="caption">
         <h3 data-text="La Banque, les Administrations Publiques"></h3>
         <p data-text="Au coeur de la finance camerounaise"></p>
       </div>
     </div>
+
     <div class="slide slide-3">
       <div class="caption">
         <h3 data-text="Sécurisez Vos Économies avec la CDEC Cameroun"></h3>
@@ -35,9 +35,8 @@
         ></p>
       </div>
     </div>
-    <div class="arrow r" @click="next">
-      <!-- SVG pour la flèche droite avec couleur #324C9C -->
 
+    <div class="arrow r" @click="next">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -60,36 +59,36 @@ let typingInterval;
 
 const cls = () => {
   slides.forEach((slide) => {
-    slide.style.display = "none";
+    slide.style.visibility = "hidden"; // Cacher la diapositive
+    slide.style.opacity = 0; // Réinitialiser l'opacité
   });
 };
 
 const next = () => {
   cls();
-  if (current === slides.length - 1) current = -1;
-  current++;
+  current = (current + 1) % slides.length; // Passer à la diapositive suivante
   showSlide();
 };
 
 const prev = () => {
   cls();
-  if (current === 0) current = slides.length;
-  current--;
+  current = (current - 1 + slides.length) % slides.length; // Passer à la diapositive précédente
   showSlide();
 };
 
 const showSlide = () => {
-  slides[current].style.display = "block";
-  slides[current].style.opacity = 0.4;
-  let x = 0.4;
+  slides[current].style.visibility = "visible"; // Rendre la diapositive visible
+  slides[current].style.opacity = 0; // Commencer avec une opacité de 0
+
+  let x = 0;
   const intX = setInterval(() => {
     x += 0.1;
-    slides[current].style.opacity = x;
+    slides[current].style.opacity = x; // Augmenter l'opacité
     if (x >= 1) {
       clearInterval(intX);
-      x = 0.4;
     }
   }, 100);
+
   startTyping(slides[current]);
 };
 
@@ -118,7 +117,8 @@ const startTyping = (slide) => {
 
 const start = () => {
   cls();
-  slides[current].style.display = "block";
+  slides[current].style.visibility = "visible"; // Rendre la première diapositive visible
+  slides[current].style.opacity = 1; // Assurer que l'opacité est à 1
   startTyping(slides[current]);
 };
 
@@ -141,7 +141,6 @@ onBeforeUnmount(() => {
   clearInterval(typingInterval);
 });
 </script>
-
 <style scoped>
 @import "../../../css/accueil.css";
 
@@ -156,15 +155,15 @@ onBeforeUnmount(() => {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
+  visibility: hidden; /* Commencer par cacher les diapositives */
+  opacity: 0; /* Opacité initiale */
   background-size: cover;
   background-position: center;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out; /* Transition fluide pour l'opacité */
 }
 
-.arrow img {
-  width: 30px;
-  height: 30px;
+.arrow {
+  cursor: pointer;
 }
 
 .l {
@@ -205,11 +204,6 @@ onBeforeUnmount(() => {
     width: 40px;
     height: 40px;
   }
-
-  .arrow img {
-    width: 25px;
-    height: 25px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -231,19 +225,6 @@ onBeforeUnmount(() => {
   .arrow {
     width: 35px;
     height: 35px;
-  }
-
-  .arrow img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .l {
-    left: 10px;
-  }
-
-  .r {
-    right: 10px;
   }
 }
 </style>

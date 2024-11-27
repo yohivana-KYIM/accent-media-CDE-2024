@@ -2,7 +2,9 @@
 <template>
   <nav>
     <div class="logo">
-      <router-link to="/"><img src="../../../assets/cdec.png" alt="" /></router-link>
+      <router-link to="/"
+        ><img src="../../../assets/cdec.png" alt=""
+      /></router-link>
     </div>
     <div class="toggle">
       <a href="#"><ion-icon name="menu-outline"></ion-icon></a>
@@ -21,14 +23,22 @@
             <router-link to="/missions" class="lien">Missions</router-link>
           </li>
           <li>
-            <a class="lien">Gouvernance</a>
+            <router-link to="/Gouvernance" class="lien"
+              >Gouvernance</router-link
+            >
           </li>
           <li>
-            <a  class="lien">Organigramme</a>
+            <router-link to="/Organigramme" class="lien"
+              >Organigramme</router-link
+            >
           </li>
+
           <li>
-            <a class="lien">Textes réglementaires</a>
+            <router-link to="/textes_reglementaires" class="lien">
+              Textes réglementaires
+            </router-link>
           </li>
+
           <li>
             <router-link to="/partenaires" class="lien"
               >Coopération et partenariats</router-link
@@ -63,13 +73,17 @@
             <router-link to="/communique" class="lien">Communiqués</router-link>
           </li>
           <li>
-            <router-link to="/actualites" class="lien">Publications</router-link>
+            <router-link to="/publications" class="lien"
+              >Publications</router-link
+            >
           </li>
           <li>
-            <a class="lien">Interviews</a>
+            <router-link to="/Interviews" class="lien">Interviews</router-link>
           </li>
           <li>
-            <a class="lien">Mediathèque</a>
+            <router-link to="/mediatheque" class="lien"
+              >Mediathèque
+            </router-link>
           </li>
           <!-- <li>
             <router-link to="/guide_utilisateurs" class="lien"
@@ -79,7 +93,7 @@
         </ul>
       </li>
       <li>
-          <a class="lien">Projets et Programme</a>
+        <a class="lien">Projets et Programme</a>
       </li>
     </ul>
   </nav>
